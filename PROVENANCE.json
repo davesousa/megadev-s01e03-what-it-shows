@@ -16,5 +16,7 @@
     "parser": "https://github.com/davesousa/megadev-s01e03-what-it-shows/issues/1",
     "hint": "https://github.com/davesousa/megadev-s01e03-what-it-shows/issues/2",
     "day-shift": "https://github.com/davesousa/megadev-s01e03-what-it-shows/issues/3"
-  }
+  },
+  "signatureSource": "Exact ticket from authenticated S01E03 start_challenge response, published as instructed and approved by Dave",
+  "signatureCorrection": "Course-issued page signature replaces the earlier free-form author label; no report allocation change"
 }

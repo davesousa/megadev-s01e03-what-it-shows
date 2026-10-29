@@ -162,7 +162,24 @@ check('Standalone rendered problem coverage', all(any(row[:2] == expected for ro
     ['One-day / cross-city date shifts — investigation', '5']]))
 check('Standalone links all issue records', all((v['github'] or v['preview']) in standalone.links for v in links.values()))
 check('Standalone shows all investigation bodies', all(r['body'] in ''.join(standalone.text) for r in problems['day-shift']))
-check('Standalone stamp appears in visible markup', 'DR-4AG7-CDB9' in ''.join(standalone.text))
+# Recompute the desk reference from the actual frontmatter; never hard-code a stamp.
+signature_match = re.search(r"^signature:\s*(['\"])(.*?)\1\s*$", frontmatter, re.M)
+signature_value = signature_match.group(2).strip() if signature_match else ''
+def desk_ref(value):
+    alphabet = '0123456789ABCDEFGHJKMNPQRSTVWXYZ'
+    units = value.encode('utf-16-le')
+    def fnv(seed):
+        h = seed
+        for i in range(0, len(units), 2):
+            h = ((h ^ int.from_bytes(units[i:i+2], 'little')) * 0x01000193) & 0xffffffff
+        return h
+    bits = (fnv(0x811c9dc5) << 8) | (fnv(0x9e3779b9) & 0xff)
+    out = ''
+    for _ in range(8):
+        out = alphabet[bits & 31] + out
+        bits >>= 5
+    return 'DR-' + out[:4] + '-' + out[4:]
+check('Standalone stamp derives from actual nonblank signature', bool(signature_value) and desk_ref(signature_value) in ''.join(standalone.text))
 check('Standalone has no external markup resources', standalone.resources == [], standalone.resources)
 link_errors = []
 site_pages = sorted((ROOT / 'site').rglob('*.html'))

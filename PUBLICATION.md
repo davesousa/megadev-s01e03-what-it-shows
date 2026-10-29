@@ -49,3 +49,11 @@ Markdown to `site/issues/` for download. Each preview includes related-draft and
 The standalone HTML carries the same root-relative links and should be served beside the
 full site when exercising navigation. Issue Markdown uses repository-relative source,
 ledger and related-issue links for GitHub. The reviewed drafts are preserved; the filed issue descriptions use absolute repository and actual issue URLs.
+
+## Course-issued signature correction
+
+After the explicit start request returned the complete instructions, Dave approved replacing
+the original author-label signature with the exact course-issued ticket, rebuilding both
+renders and pushing the correction. The required ticket appears in the signed page and
+its generated artifacts; logs and chat mask it. No claim or evaluation is authorized by
+that correction approval. Course submission requires separate authorization.

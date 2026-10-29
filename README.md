@@ -15,7 +15,7 @@ This candidate addresses MEGA.dev's [“what it shows” challenge](https://hq.m
 - [Complete rendered KB](site/kb/index.html): serve `site/` locally to exercise its root-relative links and module loading.
 - [Original ZIP](evidence/kb-export-267efc5e.zip), [provenance](PROVENANCE.json), [original-file hashes](ORIGINALS.json) and the final [file manifest](MANIFEST.json).
 
-The original accepted decision and all other export files are preserved. The new decision is **proposed**, with owner Dave and author label `Codex for Dave | S01E03 | 2026-10-29`, producing desk ref **DR-4AG7-CDB9**. That label is not publication approval or authenticated identity.
+The original accepted decision and all other export files are preserved. The new decision is **proposed**, with owner Dave. Its frontmatter signature is the exact ticket issued by the course's S01E03 start response, producing desk ref **DR-XTR7-D414**. The course requires that issued value on the public page; it remains valid there after expiry. Course acceptance is still untested.
 
 ## Review and reproduce
 

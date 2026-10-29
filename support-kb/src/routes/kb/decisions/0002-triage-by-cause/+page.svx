@@ -4,7 +4,7 @@ title: '0002 · Proposed: separate the date problems in #4471'
 owner: Dave
 status: proposed
 reviewed: '2026-10-29'
-signature: 'Codex for Dave | S01E03 | 2026-10-29'
+signature: 'v1.eyJzdWIiOiI4NzUiLCJhdWQiOiJjaGFsbGVuZ2U6d2hhdC1pdC1zaG93cyIsImlhdCI6MTc5MzI0NDc3MCwiZXhwIjoxNzkzMzMxMTcwfQ.RqJhG82aQApGTYo3aAtt9hGXzU1UDTHFV562vwLZnM4'
 supersedes: '0001, if this proposal is accepted'
 evidence_as_of: '2026-10-04'
 ---

@@ -1,6 +1,6 @@
 {
-  "recordedUTC": "2026-10-29T02:51:08.501618+00:00",
-  "status": "Authorized GitHub publication; actual issues linked; not submitted to course",
+  "recordedUTC": "2026-10-29T03:40:37.308236+00:00",
+  "status": "Course-issued signature correction authorized and verified for GitHub publication; no claim/evaluation",
   "files": {
     ".gitignore": {
       "sha256": "038fc47a27ba9d979d8d9f6cb9fdb4c99a294b021b63ddc7cddb7b96d30a4754",
@@ -11,16 +11,16 @@
       "bytes": 3636
     },
     "PROVENANCE.json": {
-      "sha256": "4e13843d7f6df3ac49335ba6d8b8f284848cc134e3c491e8c1e0e5d8e0df34f5",
-      "bytes": 1171
+      "sha256": "20769f9f2281ad06542d956d57b6608aee87145ed1db4187a8218f5dbc30eae0",
+      "bytes": 1435
     },
     "PUBLICATION.md": {
-      "sha256": "36c0622b599838394f067521bae53226ba271f6d57816db2b981bd690edfbbd5",
-      "bytes": 3411
+      "sha256": "0aa2519b3818b7686ef9215b35e3730de33e5d4e3b2f8cf4aa85e7adad2d447b",
+      "bytes": 3885
     },
     "README.md": {
-      "sha256": "e15e9ed5c4d12149b5845d2635e10d060d0cf7037ee748997169ba04225620fd",
-      "bytes": 4663
+      "sha256": "914c65a45da8d31644dd002e06307fa626861a298c9539307e788fe0a917853f",
+      "bytes": 4765
     },
     "evidence/kb-export-267efc5e.zip": {
       "sha256": "267efc5ea61aca6efaaca842160ac4d0377d56bcbf5123e61c604d6ae99597f2",
@@ -51,8 +51,8 @@
       "bytes": 528
     },
     "rendered/page.html": {
-      "sha256": "e08c92efc357883c0a21292abbdecf121447ae291ab5bd94704c7bd2890ca5d9",
-      "bytes": 424869
+      "sha256": "92b84b0b649a43e2de1a5c08d34757354d4460fc74da750350078e5a24d965d6",
+      "bytes": 424986
     },
     "site/_app/immutable/assets/2.Bt0MwIZg.css": {
       "sha256": "8dfc4296abd600e9b6ab9be0c1b8019167a5b017be06242df20e459420b610f6",
@@ -98,13 +98,13 @@
       "sha256": "97a018513b516fcbc54be643e972fe638ac4c41eb2268617bcfbe485e3a51793",
       "bytes": 2953
     },
+    "site/_app/immutable/chunks/BLr4aCHz.js": {
+      "sha256": "76c5bebaeb50c10814757b4a9a333313ba413d8d2aa553429bbb5759b8a30493",
+      "bytes": 15896
+    },
     "site/_app/immutable/chunks/BYwjHVdx.js": {
       "sha256": "3a78450183cb8b144d3e7279b6d6806e6af90c6aba42ef6c95f8318ce03e3f0a",
       "bytes": 3175
-    },
-    "site/_app/immutable/chunks/Bb-QDXHR.js": {
-      "sha256": "9b979e973f4d94bfdf0e590f5297d65657ddb1bfc55d480d052712118da93ad6",
-      "bytes": 15779
     },
     "site/_app/immutable/chunks/BisllqSh.js": {
       "sha256": "f9710fc0c9b111cb843e19ab70ce2ec14cb67091e90266074d5722917b7ee111",
@@ -142,40 +142,40 @@
       "sha256": "5eae891fe330a54136c21b4c270f29f58c38d754f35f9b1f8a17bbabaee6793e",
       "bytes": 319
     },
+    "site/_app/immutable/chunks/Ds4MC3J4.js": {
+      "sha256": "9823feeab0faf6dc1a42003fec522d44bc0d2c927504dc7b5ecb222f476bdb65",
+      "bytes": 6125
+    },
     "site/_app/immutable/chunks/wbPk3Yxo.js": {
       "sha256": "5de7f8b5c08f95a02035798b4130a56f17ae31392b8ec5f959da12e29ac3d045",
       "bytes": 1368
     },
-    "site/_app/immutable/chunks/y-SgNy1C.js": {
-      "sha256": "6a8beb80cffc193cae1ae9c0ba4f510f4430a46feb577da51816038e1ffd6401",
-      "bytes": 6123
-    },
-    "site/_app/immutable/entry/app.7lHiUyI9.js": {
-      "sha256": "7491e85a451fa53bcb474cb21af29bfbfc2bd3fe358b77a0eb7947f474065750",
+    "site/_app/immutable/entry/app.DN--AWRh.js": {
+      "sha256": "f19df98188a4837bb1fde30a36cde6aff4b73916981a29e114f9631e188c2496",
       "bytes": 7307
     },
-    "site/_app/immutable/entry/start.CIVU7IHl.js": {
-      "sha256": "253e6e632492f70995b5a4a082724786a804e3a044671bc62413e393e6c287a8",
-      "bytes": 21858
+    "site/_app/immutable/entry/start.qhc94CZb.js": {
+      "sha256": "ab0dc157fdb8a7f989e15fbf210f677b2ad3fa0503c4509a6f856c8e3f1c4c60",
+      "bytes": 21860
     },
     "site/_app/immutable/nodes/0.7kiQUMwX.js": {
       "sha256": "ba32bcc5703104cbde1d835c20319860cabf4564daba9fc5c5e3bdb69736ccfa",
       "bytes": 375
     },
-    "site/_app/immutable/nodes/1.DbT0VhkK.js": {
-      "sha256": "730ff670b0d53915119c3e6fb6f48c1dec271c598ee814e035f6922fbd4e8a35",
+    "site/_app/immutable/nodes/1.BgoxoZy4.js": {
+      "sha256": "c34a8a47cb396c178e0e0bc3cb17877aff8efb9de04473457a34b548d7690714",
       "bytes": 465
     },
-    "site/_app/immutable/nodes/2.DBNkNyI1.js": {
-      "sha256": "02c06fd76a7c4181367263f25ba64ad27f70f6b018072e7f513f7c43e60f3f14",
+    "site/_app/immutable/nodes/2._Kn1G7-k.js": {
+      "sha256": "be17246fde51ec903a402dc22da9703c5e912c3049480f3aeab437a48815d0f1",
       "bytes": 2422
     },
     "site/_app/immutable/nodes/3.CmRH9xmc.js": {
       "sha256": "2094799fc8bb9cfa95eadc2a56d157170cc164d7e8e3f5d4a1ba88f606eeedb0",
       "bytes": 66
     },
-    "site/_app/immutable/nodes/4.Dmg5wI1D.js": {
-      "sha256": "d150d4814a5c925489288c492bfe1d9d37e9cfa25c26227574982e5fa25099dc",
+    "site/_app/immutable/nodes/4.CvD_5ycv.js": {
+      "sha256": "6e59398919852847805ba2777edea820bc418fd9cff59bcf3e0c232d4bd36345",
       "bytes": 66
     },
     "site/_app/immutable/nodes/5.ldHYyw0O.js": {
@@ -187,7 +187,7 @@
       "bytes": 66
     },
     "site/_app/version.json": {
-      "sha256": "2dd110afb894895ddb3bceed3c86e2f797e0baf8bfc78b5fa3cbecbc558c636b",
+      "sha256": "80732bb14d1478799d08877aa8eea6393252ace0bceb07f2993f7b66bfd956c9",
       "bytes": 27
     },
     "site/issues/01-parser.html": {
@@ -215,24 +215,24 @@
       "bytes": 3897
     },
     "site/kb/decisions/0001-dedupe-by-subject/index.html": {
-      "sha256": "f811120c80457393e975ba8eb46f1f45d6687a02da2dbf4ba973fc05ca1bfc75",
-      "bytes": 3558
+      "sha256": "89258153d6379eab403412e6f2d33d9a593d14a915d7d2074c84fe457702d508",
+      "bytes": 3559
     },
     "site/kb/decisions/0002-triage-by-cause/index.html": {
-      "sha256": "a6f4e01487016597e4f0bcad6134c1ef501891d28384347598658d9d4a45e82b",
-      "bytes": 27225
+      "sha256": "a6e67baa66951ab80f347bd59be327a0c5e34a1764162b2bddc0a34549b585a8",
+      "bytes": 27226
     },
     "site/kb/incidents/4471/index.html": {
-      "sha256": "6f0ef33ba9a3cc5eccc9b070fc6a039b70bfc86f44b69cea6ea141e7cc476f10",
-      "bytes": 11490
+      "sha256": "cad4480e3bb5a5bdbf34708034af20311f16b2bf2664c0a3906e8f3bdd29d868",
+      "bytes": 11491
     },
     "site/kb/index.html": {
-      "sha256": "1c18ea676b85d37327d672ced5caea2b98f6da0c08809cadcafcd65edfcb6735",
-      "bytes": 4830
+      "sha256": "6e215d82144ce225c69fb57b035c9044b3065762ffd3b0b556c3c81e3a5de984",
+      "bytes": 4831
     },
     "site/kb/triage/dedupe/index.html": {
-      "sha256": "c0d667e238ea3c3ae9cf6c91974387aa298674d8486f49f09c8f514a42a53c0d",
-      "bytes": 6116
+      "sha256": "87f7e65898d25f3b30f015151b2e37743d5f41ff2c96ec14c8ad232a6cb84e0b",
+      "bytes": 6117
     },
     "support-kb/README.md": {
       "sha256": "dd0913ff9b302cbdbede0f9eccb87bff19333db6ff7f05f3a8daffa66d2ebcad",
@@ -363,8 +363,8 @@
       "bytes": 743
     },
     "support-kb/src/routes/kb/decisions/0002-triage-by-cause/+page.svx": {
-      "sha256": "e8c0b54f6cf8b26d5b170b686c1f7ca9b43d977790798920cdb838af8d4ce30d",
-      "bytes": 6398
+      "sha256": "f1cbef828cb87d8c3105db6bc9d7cd2a6ea0f31fec18793ff87785893696f2ca",
+      "bytes": 6515
     },
     "support-kb/src/routes/kb/incidents/4471/+page.svx": {
       "sha256": "6acc8708e98aab11c2c7473366ed12defd8df55a1e6efcfa76df50dc794177eb",
@@ -403,8 +403,8 @@
       "bytes": 393
     },
     "tooling/verify.py": {
-      "sha256": "3cb714e7b444da952efaf5603ec1ab74c561b6da8bcf8dc8c5aec827704db6fb",
-      "bytes": 12732
+      "sha256": "9ad8d665de93e4dc7aa7e09bb6190cff04c471267bef3f28b8ec9f8c2fcada7b",
+      "bytes": 13521
     },
     "tooling/vite.config.js": {
       "sha256": "1e849563c7b7403a43680ae811628bef59bf4b008af9f2f76d8968c5101ddf5f",
