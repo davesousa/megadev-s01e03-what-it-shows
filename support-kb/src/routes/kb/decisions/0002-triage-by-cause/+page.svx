@@ -6,41 +6,50 @@ status: proposed
 reviewed: '2026-10-29'
 signature: 'v1.eyJzdWIiOiI4NzUiLCJhdWQiOiJjaGFsbGVuZ2U6d2hhdC1pdC1zaG93cyIsImlhdCI6MTc5MzI0NDc3MCwiZXhwIjoxNzkzMzMxMTcwfQ.RqJhG82aQApGTYo3aAtt9hGXzU1UDTHFV562vwLZnM4'
 supersedes: '0001, if this proposal is accepted'
-evidence_as_of: '2026-10-04'
+evidence_as_of: '2026-10-29'
+report_snapshot_as_of: '2026-10-04'
+engineering_update_date_as_stated: '05 oct'
 ---
 
 <script>
   import QueueTimeline from '#lib/kb/QueueTimeline.svelte';
   import DedupeExplorer from '#lib/kb/DedupeExplorer.svelte';
   import IncidentEvidence from '#lib/kb/IncidentEvidence.svelte';
+  import EngineeringUpdate from '#lib/kb/EngineeringUpdate.svelte';
   import RenderStamp from '#lib/kb/RenderStamp.svelte';
   import Callout from '#lib/kb/Callout.svelte';
 </script>
 
 <Callout>
 This proposed decision separates the problems merged into #4471 and links their issue
-records below. Counts describe the supplied export, not today's queue or verified fixes.
+records below. Report counts still describe the original export. The later engineering
+notice is attributed separately below, with verified GitHub ticket dispositions.
 Accepted decision 0001 is preserved until the desk accepts a successor.
 </Callout>
 
-## The problems and their tickets
+<EngineeringUpdate />
 
-**Shared parser:** it reads dates month first while the affected tenants write day first.
+## The reported problems and their tickets
+
+**Shared parser:** the export describes dates being read month first while the affected
+tenants write day first. The later engineering notice reports a parser fix.
 R-41200 describes 7 April becoming 4 July. App, email and booking-v2 form reports use this
 path under the exported model. The desk's flagged date-shift reports are excluded from
 this ticket because their descriptions do not establish that parser mechanism.
 
-**Form hint:** booking-v3 displays MM/DD/YYYY while interpreting the entry in the
-day-first tenant's convention. R-41230 describes 6 January becoming 1 June. This needs
-its own fix: correcting the shared parser does not correct misleading form guidance.
-The relevant tenant, form version and channel must be considered together.
+**Form hint:** the export describes booking-v3 displaying MM/DD/YYYY while interpreting
+the entry in the day-first tenant's convention. R-41230 describes 6 January becoming
+1 June. The engineering notice now records retirement of booking-v3, with a won't-fix
+outcome for this problem. That outcome does not mean the hint was corrected. The relevant
+tenant, form version and channel must be considered together when reading the old reports.
 
 **One-day / cross-city date shifts:** the desk flagged reports whose descriptions differ
 from a month/day swap. R-41202 says Tuesday 12 May became Monday 11 May; R-41620 says
 Tuesday 6 October appeared as Monday. Other reports describe differing local days or an
-invite arriving before booking. They get a separate investigation ticket now. A proven
+invite arriving before booking. They are tracked in a separate investigation ticket. A proven
 common cause is not required to preserve and investigate this distinct reported problem.
-A timezone or calendar-conversion defect remains a hypothesis, not a diagnosis.
+A timezone or calendar-conversion defect remains a hypothesis, not a diagnosis. The new
+engineering notice supplies no case-specific outcome for this investigation.
 
 <IncidentEvidence />
 
@@ -70,7 +79,8 @@ its counts are ticket coverage, not a claim that every report's root cause is pr
 4. Open an investigation for a distinct reported problem even while its cause is unknown.
    Record what is observed and what evidence would confirm or reject a suspected cause.
    Split that investigation further if reproduction establishes different defects.
-5. Verify the parser and form-hint corrections independently. For date-shift reports,
+5. Record each problem's outcome separately: a reported parser fix and a decision not
+   to fix a retired form have different closure reasons. For date-shift reports,
    obtain original input, stored values, intended date or instant, and the relevant zones
    before diagnosing a conversion. Keep report links when moving or splitting work.
 
@@ -93,6 +103,23 @@ The chart groups source date portions into Monday–Sunday weeks; it does not co
 to UTC. The coverage table uses received dates. Neither a fresh render nor this page's
 review date refreshes the underlying export.
 
+## Unresolved investigation: issue #3
+
+Issue #3 remains an open investigation. The desk notice reports outcomes
+for parser and hint, but does not state how the flagged reports were resolved. Closing
+#4471 does not independently establish a fix for each of their observations. The course's
+acceptance of the ticket step also does not prove a common cause for this investigation.
+
+The evidence table above retains every original body. Follow-up needs the original entered
+and stored event values, calendar/invite payloads, event identities, intended local date or
+instant, timezone settings and creation/send/receipt timestamps. The invite-before-booking
+claim needs clock evidence; differing local days across cities need scheduling semantics.
+
+**Recommended tracking:** keep issue #3 open while those facts remain unavailable. Do not
+mark it completed or claim a timezone repair based only on the parser/hint notice. If new
+evidence establishes separate defects, a valid conversion, or an administrative decision
+not to pursue the investigation, record that reason before merging, splitting or closing it.
+
 ## Evidence boundaries and follow-up
 
 The export supplies reported symptoms and a model of the two input paths. It supplies no
@@ -113,7 +140,8 @@ allocation. Linked issue records include coverage and engineering follow-up.
 
 If this proposal is accepted, the desk should link it from the triage guide and incident
 page and maintain the investigation as evidence arrives. The coverage table links the
-filed GitHub issues. No live queue or fix status is inferred
-from the preserved export.
+filed GitHub issues. The reported engineering outcomes come from the separately linked
+course-page notice; they are not inferred from the old export or independently reproduced.
+GitHub issue #1 is closed as completed and #2 as not planned, based on the reported engineering outcomes. Issue #3 remains open; its five reports have no case-specific resolution in the notice.
 
 <RenderStamp {signature} />

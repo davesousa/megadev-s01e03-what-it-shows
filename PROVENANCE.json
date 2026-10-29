@@ -6,7 +6,7 @@
   "acquiredUTC": "2026-10-29T00:13:57Z",
   "originalArchiveSHA256": "267efc5ea61aca6efaaca842160ac4d0377d56bcbf5123e61c604d6ae99597f2",
   "candidateDate": "2026-10-29",
-  "status": "GitHub publication authorized; three issues filed; not submitted to course",
+  "status": "Engineering-status update approved for publication; #1 completed, #2 not planned, #3 open; no second course claim",
   "revision": "panel-revision-r1",
   "previousCandidateManifestSHA256": "309828699feefc0197d8fbe009d6069c919c501d38d1dd248964573180159bad",
   "allocation": "374 parser / 33 hint / 5 investigation; original classifier unchanged at 379/33",
@@ -18,5 +18,16 @@
     "day-shift": "https://github.com/davesousa/megadev-s01e03-what-it-shows/issues/3"
   },
   "signatureSource": "Exact ticket from authenticated S01E03 start_challenge response, published as instructed and approved by Dave",
-  "signatureCorrection": "Course-issued page signature replaces the earlier free-form author label; no report allocation change"
+  "signatureCorrection": "Course-issued page signature replaces the earlier free-form author label; no report allocation change",
+  "basePublishedCommit": "d9651d4a83aa37e4fa9d1be0cf2e4616f77b4bbc",
+  "basePublishedManifestSHA256": "2f0917a553a0e766d9a2ef7ac3408565f2663c48a57f3f7921560787bdf43217",
+  "engineeringUpdateSource": "https://hq.mega.dev/challenges/what-it-shows",
+  "engineeringUpdateObservedOn": "2026-10-29",
+  "engineeringUpdateDraftManifestSHA256": "060cc2eb54bb1d705424152328b9102e97cd3f4fcb09db6102c60bf636365720",
+  "githubTracking": {
+    "1": "closed/completed",
+    "2": "closed/not_planned",
+    "3": "open/unresolved"
+  },
+  "claimsMade": 1
 }

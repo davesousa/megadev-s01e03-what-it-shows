@@ -1,8 +1,18 @@
-# S01E03 — what it shows
+# S01E03 — local engineering-update draft
 
 This candidate addresses MEGA.dev's [“what it shows” challenge](https://hq.mega.dev/challenges/what-it-shows): separate the problems merged into ticket #4471, state report coverage, and add a signed knowledge-base page with its rendered presentation.
 
-**Status: approved publication package.** The three GitHub issues are filed and linked below. The independent judging panel passed the reviewed solution 5–0. Nothing has been submitted to the course; course acceptance remains untested.
+**Status: engineering-status update approved for publication by Dave.** The course accepted the first ticket step but has not declared the challenge solved. The course-page engineering notice reports the parser fixed and booking-v3 retired. GitHub issue #1 is closed as completed, #2 is closed as not planned, and #3 remains open as an unresolved investigation. No second course submission was made.
+
+## Current ticket status
+
+The course-page update reports #4471 closed “05 oct”: parser FIXED; hint WON'T FIX because booking-v3 was retired. The notice does not state a year. Report counts remain the 2026-10-04 snapshot; the engineering observation and GitHub tracking update are dated 2026-10-29.
+
+- Issue #1: closed as completed, citing the reported parser fix.
+- Issue #2: closed as not planned, citing retirement rather than a hint correction.
+- Issue #3: open; no case-specific resolution is supplied for its five reports.
+
+The engineering notice reports outcomes; no production repair was independently reproduced. Publication and the two closures were approved by Dave. Another course submission requires separate authorization.
 
 ## Contents
 
@@ -15,7 +25,7 @@ This candidate addresses MEGA.dev's [“what it shows” challenge](https://hq.m
 - [Complete rendered KB](site/kb/index.html): serve `site/` locally to exercise its root-relative links and module loading.
 - [Original ZIP](evidence/kb-export-267efc5e.zip), [provenance](PROVENANCE.json), [original-file hashes](ORIGINALS.json) and the final [file manifest](MANIFEST.json).
 
-The original accepted decision and all other export files are preserved. The new decision is **proposed**, with owner Dave. Its frontmatter signature is the exact ticket issued by the course's S01E03 start response, producing desk ref **DR-XTR7-D414**. The course requires that issued value on the public page; it remains valid there after expiry. Course acceptance is still untested.
+The original accepted decision and all other export files are preserved. The new decision is **proposed**, with owner Dave. Its frontmatter signature is the exact ticket issued by the course's S01E03 start response, producing desk ref **DR-XTR7-D414**. The course requires that issued value on the public page; it remains valid there after expiry. The first course claim accepted the ticket step only; final course acceptance remains pending.
 
 ## Review and reproduce
 
@@ -41,7 +51,7 @@ The site rebuild writes `.rebuilt-site/`; the single-page rebuild writes `.singl
 
 ## Limits and publication scope
 
-Counts describe proposed ticket coverage for the supplied 2026-10-04 export. Historical tenant settings, production reproduction, current ticket/fix state, additional real-world causes and course acceptance are unverified. The old classifier still returns 379/33; proposed ticket coverage is 374/33/5. The five flagged reports have their own investigation. Four remaining parser assignments lack explicit date pairs and are provisional. Neither model output nor body review proves historical production behavior.
+Counts describe proposed ticket coverage for the supplied 2026-10-04 export. Historical tenant settings, production reproduction, production fix behavior, additional real-world causes and final course acceptance are unverified. Current GitHub dispositions are recorded above. The old classifier still returns 379/33; proposed ticket coverage is 374/33/5. The five flagged reports have their own investigation. Four remaining parser assignments lack explicit date pairs and are provisional. Neither model output nor body review proves historical production behavior.
 
 The interactive artifacts embed the complete fictional report dataset and tenant directory; collapsed details do not hide that data. The challenge explicitly calls for public delivery of this course-story material. No unrelated workspace files, account history, credentials, local dependency installations or runtime binaries are included.
 

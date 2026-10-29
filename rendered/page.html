@@ -3,12 +3,6 @@
   aside.warn.svelte-w4n2yi { border-color: var(--warn); background: var(--warn-bg); }
 
 
-  .try.svelte-1lgputm { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.75rem; margin: 1rem 0; }
-  fieldset.svelte-1lgputm { display: grid; gap: 0.4rem; border: 1px solid var(--line); border-radius: 6px; }
-  .verdict.svelte-1lgputm { grid-column: 1 / -1; margin: 0; font-weight: 600; color: var(--muted); }
-  .dup.svelte-1lgputm { color: var(--accent); font-weight: 600; }
-
-
   :root {
     --bg: #fbfaf7; --fg: #1d1d1b; --muted: #6b6a66; --line: #e3e0d8;
     --accent: #2f6f5e; --warn: #b4501f; --warn-bg: #fbeee6; --note-bg: #eef5f2;
@@ -45,6 +39,12 @@
   .key.merged.svelte-142k1q6 { background: var(--accent); }
 
 
+  .try.svelte-1lgputm { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.75rem; margin: 1rem 0; }
+  fieldset.svelte-1lgputm { display: grid; gap: 0.4rem; border: 1px solid var(--line); border-radius: 6px; }
+  .verdict.svelte-1lgputm { grid-column: 1 / -1; margin: 0; font-weight: 600; color: var(--muted); }
+  .dup.svelte-1lgputm { color: var(--accent); font-weight: 600; }
+
+
   .table-scroll.svelte-srw6ap { overflow-x: auto; }
   table.svelte-srw6ap { border-collapse: collapse; min-width: 600px; width: 100%; }
   th.svelte-srw6ap, td.svelte-srw6ap { text-align: left; padding: 0.6rem; border-bottom: 1px solid var(--muted); }
@@ -53,23 +53,38 @@
   code.svelte-srw6ap { overflow-wrap: anywhere; }
 
 
+  .table-scroll.svelte-86ays { overflow-x: auto; }
+  table.svelte-86ays { width: 100%; min-width: 620px; border-collapse: collapse; }
+  th.svelte-86ays, td.svelte-86ays { padding: 0.65rem; text-align: left; vertical-align: top; border-bottom: 1px solid var(--muted); }
+  code.svelte-86ays { overflow-wrap: anywhere; }
+  .tracking-status.svelte-86ays { border-left: 3px solid var(--warn); padding-left: 1rem; }
+
+
   .stamp.svelte-1obw15v { margin: 2rem 0 0; font: 0.85rem var(--mono); color: var(--muted); }
   .stamp.svelte-1obw15v b:where(.svelte-1obw15v) { color: var(--accent); letter-spacing: 0.04em; }
   .missing.svelte-1obw15v { color: var(--warn); }
 </style></head><body><div id="app"><!--[--><div class="kb svelte-1g7j3tg"><header><a class="crumb svelte-1g7j3tg" href="/kb">support desk · kb</a> <h1 class="svelte-1g7j3tg">0002 · Proposed: separate the date problems in #4471</h1> <p class="meta svelte-1g7j3tg"><span>owner <b>Dave</b></span> <span class="status proposed svelte-1g7j3tg">proposed</span> <span class="svelte-1g7j3tg">reviewed 2026-10-29 · 0 days ago</span></p></header> <!--[-1--><!--]--> <main><aside class="note svelte-w4n2yi"><!---->This proposed decision separates the problems merged into #4471 and links their issue
-records below. Counts describe the supplied export, not today's queue or verified fixes.
-Accepted decision 0001 is preserved until the desk accepts a successor.<!----></aside><!----> <h2>The problems and their tickets</h2> <p><strong>Shared parser:</strong> it reads dates month first while the affected tenants write day first.
+records below. Report counts still describe the original export. The later engineering
+notice is attributed separately below, with verified GitHub ticket dispositions.
+Accepted decision 0001 is preserved until the desk accepts a successor.<!----></aside><!----> <section aria-labelledby="engineering-outcomes"><h2 id="engineering-outcomes">Engineering update and ticket status</h2> <p>The <a href="https://hq.mega.dev/challenges/what-it-shows">support desk's course-page update</a> reports <strong>#4471 closed 05 oct</strong>.
+    The notice does not state a year. It was observed on <time>2026-10-29</time>,
+    after the first ticket submission. Report coverage still uses the <time>2026-10-04</time> export.</p> <div class="table-scroll svelte-86ays" role="region" aria-label="Reported engineering outcomes and current GitHub status" tabindex="0"><table class="svelte-86ays"><thead><tr><th class="svelte-86ays">Problem</th><th class="svelte-86ays">Reported engineering outcome</th><th class="svelte-86ays">GitHub status</th></tr></thead><tbody><!--[--><tr data-outcome="parser"><td class="svelte-86ays"><a href="https://github.com/davesousa/megadev-s01e03-what-it-shows/issues/1">Shared parser · issue #1</a></td><td class="svelte-86ays"><strong>FIXED</strong><br/><code class="svelte-86ays">fix(dates): parse dd/mm for eu locales</code></td><td class="svelte-86ays">Closed as completed</td></tr><tr data-outcome="hint"><td class="svelte-86ays"><a href="https://github.com/davesousa/megadev-s01e03-what-it-shows/issues/2">Booking-v3 form hint · issue #2</a></td><td class="svelte-86ays"><strong>WON'T FIX</strong><br/><code class="svelte-86ays">booking-v3 form retired</code></td><td class="svelte-86ays">Closed as not planned</td></tr><!--]--><tr data-outcome="day-shift"><td class="svelte-86ays"><a href="https://github.com/davesousa/megadev-s01e03-what-it-shows/issues/3">Investigation · issue #3</a></td><td class="svelte-86ays">No case-specific outcome stated for the 5 flagged reports</td><td class="svelte-86ays">Open: unresolved investigation</td></tr></tbody></table></div> <p class="tracking-status svelte-86ays"><strong>GitHub tracking updated: issue #1 closed as completed; issue #2 closed as not planned; issue #3 remains open.</strong> A reported parser fix and a decision not to fix a retired form have different outcomes.
+    The engineering notice supplies no resolution for the separate investigation.
+    These are attributed desk statements; no production fix was independently tested here.</p></section><!----> <h2>The reported problems and their tickets</h2> <p><strong>Shared parser:</strong> the export describes dates being read month first while the affected
+tenants write day first. The later engineering notice reports a parser fix.
 R-41200 describes 7 April becoming 4 July. App, email and booking-v2 form reports use this
 path under the exported model. The desk’s flagged date-shift reports are excluded from
-this ticket because their descriptions do not establish that parser mechanism.</p> <p><strong>Form hint:</strong> booking-v3 displays MM/DD/YYYY while interpreting the entry in the
-day-first tenant’s convention. R-41230 describes 6 January becoming 1 June. This needs
-its own fix: correcting the shared parser does not correct misleading form guidance.
-The relevant tenant, form version and channel must be considered together.</p> <p><strong>One-day / cross-city date shifts:</strong> the desk flagged reports whose descriptions differ
+this ticket because their descriptions do not establish that parser mechanism.</p> <p><strong>Form hint:</strong> the export describes booking-v3 displaying MM/DD/YYYY while interpreting
+the entry in the day-first tenant’s convention. R-41230 describes 6 January becoming
+1 June. The engineering notice now records retirement of booking-v3, with a won’t-fix
+outcome for this problem. That outcome does not mean the hint was corrected. The relevant
+tenant, form version and channel must be considered together when reading the old reports.</p> <p><strong>One-day / cross-city date shifts:</strong> the desk flagged reports whose descriptions differ
 from a month/day swap. R-41202 says Tuesday 12 May became Monday 11 May; R-41620 says
 Tuesday 6 October appeared as Monday. Other reports describe differing local days or an
-invite arriving before booking. They get a separate investigation ticket now. A proven
+invite arriving before booking. They are tracked in a separate investigation ticket. A proven
 common cause is not required to preserve and investigate this distinct reported problem.
-A timezone or calendar-conversion defect remains a hypothesis, not a diagnosis.</p> <p><strong>427</strong> export rows become <strong>412</strong> unique report IDs; <strong>15</strong> identical repeat rows are removed. <strong>412</strong> unique reports belong to #4471. The proposed ticket allocation below
+A timezone or calendar-conversion defect remains a hypothesis, not a diagnosis. The new
+engineering notice supplies no case-specific outcome for this investigation.</p> <p><strong>427</strong> export rows become <strong>412</strong> unique report IDs; <strong>15</strong> identical repeat rows are removed. <strong>412</strong> unique reports belong to #4471. The proposed ticket allocation below
   covers each report once, in <strong>3</strong> problem groups.</p> <div class="table-scroll svelte-srw6ap" role="region" aria-label="Proposed ticket coverage" tabindex="0"><table class="svelte-srw6ap"><thead><tr><th class="svelte-srw6ap">Problem</th><th class="svelte-srw6ap">Reports</th><th class="svelte-srw6ap">Received dates</th><th class="svelte-srw6ap">Ticket</th></tr></thead><tbody><!--[--><tr data-problem="parser"><td class="svelte-srw6ap">Shared month-first parser</td><td class="svelte-srw6ap">374</td><td class="svelte-srw6ap">2026-04-01 – 2026-10-04</td><td class="svelte-srw6ap"><!--[0--><a href="https://github.com/davesousa/megadev-s01e03-what-it-shows/issues/1">GitHub issue</a><!--]--></td></tr><tr data-problem="hint"><td class="svelte-srw6ap">Booking-v3 form hint mismatch</td><td class="svelte-srw6ap">33</td><td class="svelte-srw6ap">2026-04-17 – 2026-09-22</td><td class="svelte-srw6ap"><!--[0--><a href="https://github.com/davesousa/megadev-s01e03-what-it-shows/issues/2">GitHub issue</a><!--]--></td></tr><tr data-problem="day-shift"><td class="svelte-srw6ap">One-day / cross-city date shifts — investigation</td><td class="svelte-srw6ap">5</td><td class="svelte-srw6ap">2026-04-02 – 2026-10-04</td><td class="svelte-srw6ap"><!--[0--><a href="https://github.com/davesousa/megadev-s01e03-what-it-shows/issues/3">GitHub issue</a><!--]--></td></tr><!--]--></tbody></table></div> <!--[-1--><p>The linked GitHub issues cover this exported snapshot. Filing an issue does not confirm a fix.</p><!--]--> <p>The original classifier still returns <strong>379</strong> parser and <strong>33</strong> hint reports. It does not read report bodies.
   The new allocation removes the <strong>5</strong> desk-flagged reports
   from parser coverage and gives them a separate investigation. No report is counted twice.
@@ -88,7 +103,8 @@ intake labels and browser locale alone do not establish the mechanism.</li> <li>
 fit its explanation, track that discrepancy separately instead of merging it into a
 known fix merely because the classifier returns the same label.</li> <li>Open an investigation for a distinct reported problem even while its cause is unknown.
 Record what is observed and what evidence would confirm or reject a suspected cause.
-Split that investigation further if reproduction establishes different defects.</li> <li>Verify the parser and form-hint corrections independently. For date-shift reports,
+Split that investigation further if reproduction establishes different defects.</li> <li>Record each problem’s outcome separately: a reported parser fix and a decision not
+to fix a retired form have different closure reasons. For date-shift reports,
 obtain original input, stored values, intended date or instant, and the relevant zones
 before diagnosing a conversion. Keep report links when moving or splitting work.</li></ol> <h3>Try the existing classifier</h3> <p>The explorer below demonstrates the original model, not the new problem allocation.
 Its initial example has matching subjects but different parser/hint classifications.
@@ -97,7 +113,16 @@ or apply the desk notes, so its verdict alone must not authorize a merge. For un
 tenants, “different causes” means only that a shared cause has not been established.</p> <div class="try svelte-1lgputm"><!--[--><fieldset class="svelte-1lgputm"><legend>report A</legend> <select aria-label="tenant"><!--[--><option selected="">alder.physio</option><option>copper.studio</option><option>harbour.dental</option><option>kettle.books</option><option>lantern.row</option><option>long.table</option><option>morrow.tax</option><option>nine.lanterns</option><option>pale.harbour</option><option>ridge.clinic</option><option>stone.and.sons</option><!--]--></select> <select aria-label="channel"><!--[--><option>app</option><option>email</option><option selected="">form</option><!--]--></select> <input value="Booking on the wrong date" aria-label="subject"/> <code>hint</code></fieldset><fieldset class="svelte-1lgputm"><legend>report B</legend> <select aria-label="tenant"><!--[--><option>alder.physio</option><option>copper.studio</option><option>harbour.dental</option><option selected="">kettle.books</option><option>lantern.row</option><option>long.table</option><option>morrow.tax</option><option>nine.lanterns</option><option>pale.harbour</option><option>ridge.clinic</option><option>stone.and.sons</option><!--]--></select> <select aria-label="channel"><!--[--><option>app</option><option>email</option><option selected="">form</option><!--]--></select> <input value="Booking on the wrong date" aria-label="subject"/> <code>parser</code></fieldset><!--]--> <p class="verdict svelte-1lgputm">different causes — keep apart</p></div> <table><thead><tr><th>case</th><th>same subject</th><th>same cause</th></tr></thead><tbody><!--[--><tr><td>app vs email, same tenant</td><td>no</td><td class="svelte-1lgputm dup">yes</td></tr><tr><td>same subject, same tenant, different channel</td><td>yes</td><td class="svelte-1lgputm">no</td></tr><tr><td>same subject, same channel, different tenant</td><td>yes</td><td class="svelte-1lgputm">no</td></tr><tr><td>different subject, same way in</td><td>no</td><td class="svelte-1lgputm dup">yes</td></tr><tr><td>no tenant on file</td><td>yes</td><td class="svelte-1lgputm">no</td></tr><!--]--></tbody></table><!----> <h2>Receipt and consolidation are different events</h2> <figure><svg viewBox="0 0 648 140" role="img" aria-label="reports received and merged into #4471, per week" class="svelte-142k1q6"><!--[--><rect class="in svelte-142k1q6" x="2" y="106.29629629629629" width="9" height="3.7037037037037033"></rect><rect class="merged svelte-142k1q6" x="12" y="110" width="9" height="0"></rect><!--[0--><text x="12" y="128" class="svelte-142k1q6">03-30</text><!--]--><rect class="in svelte-142k1q6" x="26" y="104.17989417989418" width="9" height="5.82010582010582"></rect><rect class="merged svelte-142k1q6" x="36" y="110" width="9" height="0"></rect><!--[-1--><!--]--><rect class="in svelte-142k1q6" x="50" y="102.5925925925926" width="9" height="7.4074074074074066"></rect><rect class="merged svelte-142k1q6" x="60" y="110" width="9" height="0"></rect><!--[-1--><!--]--><rect class="in svelte-142k1q6" x="74" y="99.94708994708995" width="9" height="10.052910052910052"></rect><rect class="merged svelte-142k1q6" x="84" y="110" width="9" height="0"></rect><!--[-1--><!--]--><rect class="in svelte-142k1q6" x="98" y="101.53439153439153" width="9" height="8.465608465608465"></rect><rect class="merged svelte-142k1q6" x="108" y="110" width="9" height="0"></rect><!--[0--><text x="108" y="128" class="svelte-142k1q6">04-27</text><!--]--><rect class="in svelte-142k1q6" x="122" y="103.65079365079364" width="9" height="6.349206349206349"></rect><rect class="merged svelte-142k1q6" x="132" y="110" width="9" height="0"></rect><!--[-1--><!--]--><rect class="in svelte-142k1q6" x="146" y="105.76719576719577" width="9" height="4.232804232804233"></rect><rect class="merged svelte-142k1q6" x="156" y="110" width="9" height="0"></rect><!--[-1--><!--]--><rect class="in svelte-142k1q6" x="170" y="103.65079365079364" width="9" height="6.349206349206349"></rect><rect class="merged svelte-142k1q6" x="180" y="110" width="9" height="0"></rect><!--[-1--><!--]--><rect class="in svelte-142k1q6" x="194" y="102.5925925925926" width="9" height="7.4074074074074066"></rect><rect class="merged svelte-142k1q6" x="204" y="110" width="9" height="0"></rect><!--[0--><text x="204" y="128" class="svelte-142k1q6">05-25</text><!--]--><rect class="in svelte-142k1q6" x="218" y="101.00529100529101" width="9" height="8.994708994708994"></rect><rect class="merged svelte-142k1q6" x="228" y="110" width="9" height="0"></rect><!--[-1--><!--]--><rect class="in svelte-142k1q6" x="242" y="101.53439153439153" width="9" height="8.465608465608465"></rect><rect class="merged svelte-142k1q6" x="252" y="110" width="9" height="0"></rect><!--[-1--><!--]--><rect class="in svelte-142k1q6" x="266" y="101.00529100529101" width="9" height="8.994708994708994"></rect><rect class="merged svelte-142k1q6" x="276" y="110" width="9" height="0"></rect><!--[-1--><!--]--><rect class="in svelte-142k1q6" x="290" y="104.17989417989418" width="9" height="5.82010582010582"></rect><rect class="merged svelte-142k1q6" x="300" y="110" width="9" height="0"></rect><!--[0--><text x="300" y="128" class="svelte-142k1q6">06-22</text><!--]--><rect class="in svelte-142k1q6" x="314" y="102.06349206349206" width="9" height="7.936507936507936"></rect><rect class="merged svelte-142k1q6" x="324" y="10" width="9" height="100"></rect><!--[-1--><!--]--><rect class="in svelte-142k1q6" x="338" y="99.94708994708995" width="9" height="10.052910052910052"></rect><rect class="merged svelte-142k1q6" x="348" y="100.47619047619048" width="9" height="9.523809523809524"></rect><!--[-1--><!--]--><rect class="in svelte-142k1q6" x="362" y="101.00529100529101" width="9" height="8.994708994708994"></rect><rect class="merged svelte-142k1q6" x="372" y="100.47619047619048" width="9" height="9.523809523809524"></rect><!--[-1--><!--]--><rect class="in svelte-142k1q6" x="386" y="102.06349206349206" width="9" height="7.936507936507936"></rect><rect class="merged svelte-142k1q6" x="396" y="102.06349206349206" width="9" height="7.936507936507936"></rect><!--[0--><text x="396" y="128" class="svelte-142k1q6">07-20</text><!--]--><rect class="in svelte-142k1q6" x="410" y="99.94708994708995" width="9" height="10.052910052910052"></rect><rect class="merged svelte-142k1q6" x="420" y="99.94708994708995" width="9" height="10.052910052910052"></rect><!--[-1--><!--]--><rect class="in svelte-142k1q6" x="434" y="105.76719576719577" width="9" height="4.232804232804233"></rect><rect class="merged svelte-142k1q6" x="444" y="105.76719576719577" width="9" height="4.232804232804233"></rect><!--[-1--><!--]--><rect class="in svelte-142k1q6" x="458" y="102.06349206349206" width="9" height="7.936507936507936"></rect><rect class="merged svelte-142k1q6" x="468" y="102.06349206349206" width="9" height="7.936507936507936"></rect><!--[-1--><!--]--><rect class="in svelte-142k1q6" x="482" y="99.41798941798942" width="9" height="10.582010582010582"></rect><rect class="merged svelte-142k1q6" x="492" y="99.41798941798942" width="9" height="10.582010582010582"></rect><!--[0--><text x="492" y="128" class="svelte-142k1q6">08-17</text><!--]--><rect class="in svelte-142k1q6" x="506" y="102.5925925925926" width="9" height="7.4074074074074066"></rect><rect class="merged svelte-142k1q6" x="516" y="102.5925925925926" width="9" height="7.4074074074074066"></rect><!--[-1--><!--]--><rect class="in svelte-142k1q6" x="530" y="98.88888888888889" width="9" height="11.11111111111111"></rect><rect class="merged svelte-142k1q6" x="540" y="98.88888888888889" width="9" height="11.11111111111111"></rect><!--[-1--><!--]--><rect class="in svelte-142k1q6" x="554" y="99.41798941798942" width="9" height="10.582010582010582"></rect><rect class="merged svelte-142k1q6" x="564" y="99.41798941798942" width="9" height="10.582010582010582"></rect><!--[-1--><!--]--><rect class="in svelte-142k1q6" x="578" y="102.06349206349206" width="9" height="7.936507936507936"></rect><rect class="merged svelte-142k1q6" x="588" y="102.06349206349206" width="9" height="7.936507936507936"></rect><!--[0--><text x="588" y="128" class="svelte-142k1q6">09-14</text><!--]--><rect class="in svelte-142k1q6" x="602" y="96.77248677248677" width="9" height="13.227513227513226"></rect><rect class="merged svelte-142k1q6" x="612" y="97.83068783068784" width="9" height="12.16931216931217"></rect><!--[-1--><!--]--><rect class="in svelte-142k1q6" x="626" y="102.06349206349206" width="9" height="7.936507936507936"></rect><rect class="merged svelte-142k1q6" x="636" y="101.00529100529101" width="9" height="8.994708994708994"></rect><!--[-1--><!--]--><!--]--></svg> <figcaption class="svelte-142k1q6"><span class="key in svelte-142k1q6"></span> received · <span class="key merged svelte-142k1q6"></span> merged into #4471 · per week</figcaption></figure><!----> <p>A rise in merges can reflect consolidation of older reports, not the start of a failure.
 The chart groups source date portions into Monday–Sunday weeks; it does not convert them
 to UTC. The coverage table uses received dates. Neither a fresh render nor this page’s
-review date refreshes the underlying export.</p> <h2>Evidence boundaries and follow-up</h2> <p>The export supplies reported symptoms and a model of the two input paths. It supplies no
+review date refreshes the underlying export.</p> <h2>Unresolved investigation: issue #3</h2> <p>Issue #3 remains an open investigation. The desk notice reports outcomes
+for parser and hint, but does not state how the flagged reports were resolved. Closing
+#4471 does not independently establish a fix for each of their observations. The course’s
+acceptance of the ticket step also does not prove a common cause for this investigation.</p> <p>The evidence table above retains every original body. Follow-up needs the original entered
+and stored event values, calendar/invite payloads, event identities, intended local date or
+instant, timezone settings and creation/send/receipt timestamps. The invite-before-booking
+claim needs clock evidence; differing local days across cities need scheduling semantics.</p> <p><strong>Recommended tracking:</strong> keep issue #3 open while those facts remain unavailable. Do not
+mark it completed or claim a timezone repair based only on the parser/hint notice. If new
+evidence establishes separate defects, a valid conversion, or an administrative decision
+not to pursue the investigation, record that reason before merging, splitting or closing it.</p> <h2>Evidence boundaries and follow-up</h2> <p>The export supplies reported symptoms and a model of the two input paths. It supplies no
 production implementation, reproduced failures or effective-dated tenant history.
 Historical parser/hint assignments therefore use the exported directory. Reports without
 exact input/output dates remain weaker evidence, even when assigned to a ticket.</p> <p>The separate investigation preserves all flagged bodies. In particular, different local
@@ -107,8 +132,9 @@ not an assumed timezone diagnosis. The invite-before-booking claim needs its tim
 Do not close these reports as a parser fix without evidence explaining their behavior.</p> <p>Source ownership stays with the support desk. The original reports, tenant directory and <code>desk-notes.json</code> remain under <code>src/lib/data/</code>; the original rules remain in <code>causes.ts</code> and <code>locales.ts</code>. <code>problems.ts</code> and <code>IncidentEvidence.svelte</code> compute this page’s new
 allocation. Linked issue records include coverage and engineering follow-up.</p> <p>If this proposal is accepted, the desk should link it from the triage guide and incident
 page and maintain the investigation as evidence arrives. The coverage table links the
-filed GitHub issues. No live queue or fix status is inferred
-from the preserved export.</p> <!--[0--><p class="stamp svelte-1obw15v">desk ref <b class="svelte-1obw15v">DR-XTR7-D414</b></p><!--]--><!----><!----></main> <footer class="svelte-1g7j3tg">Pages are written by people. Tables and charts are built from data at render time.</footer></div><!--]--></div><script type="module">// challenges/what-it-shows/publication/checkout/node_modules/esm-env/dev-fallback.js
+filed GitHub issues. The reported engineering outcomes come from the separately linked
+course-page notice; they are not inferred from the old export or independently reproduced.
+GitHub issue #1 is closed as completed and #2 as not planned, based on the reported engineering outcomes. Issue #3 remains open; its five reports have no case-specific resolution in the notice.</p> <!--[0--><p class="stamp svelte-1obw15v">desk ref <b class="svelte-1obw15v">DR-XTR7-D414</b></p><!--]--><!----><!----></main> <footer class="svelte-1g7j3tg">Pages are written by people. Tables and charts are built from data at render time.</footer></div><!--]--></div><script type="module">// challenges/what-it-shows/publication/checkout/node_modules/esm-env/dev-fallback.js
 var node_env = globalThis.process?.env?.NODE_ENV;
 var dev_fallback_default = node_env && !node_env.toLowerCase().startsWith("prod");
 
@@ -1445,11 +1471,11 @@ var Batch = class _Batch {
         this.#unlink();
         infinite_loop_guard();
       }
-      for (const root8 of this.#resolve()) {
+      for (const root9 of this.#resolve()) {
         try {
-          this.#traverse(root8, effects, render_effects);
+          this.#traverse(root9, effects, render_effects);
         } catch (e) {
-          reset_all(root8);
+          reset_all(root9);
           if (!this.#is_deferred()) this.discard();
           throw e;
         }
@@ -1515,9 +1541,9 @@ var Batch = class _Batch {
    * @param {Effect[]} effects
    * @param {Effect[]} render_effects
    */
-  #traverse(root8, effects, render_effects) {
-    root8.f ^= CLEAN;
-    var effect2 = root8.first;
+  #traverse(root9, effects, render_effects) {
+    root9.f ^= CLEAN;
+    var effect2 = root9.first;
     while (effect2 !== null) {
       var flags2 = effect2.f;
       var is_branch = (flags2 & (BRANCH_EFFECT | ROOT_EFFECT)) !== 0;
@@ -1762,8 +1788,8 @@ var Batch = class _Batch {
         }
         if (batch.#scheduled.length > 0 && !batch.#decrement_queued) {
           batch.apply();
-          for (var root8 of batch.#resolve()) {
-            batch.#traverse(root8, [], []);
+          for (var root9 of batch.#resolve()) {
+            batch.#traverse(root9, [], []);
           }
         }
         batch.deactivate();
@@ -3285,7 +3311,7 @@ function is_dirty(reaction) {
   }
   return false;
 }
-function schedule_possible_effect_self_invalidation(signal, effect2, root8 = true) {
+function schedule_possible_effect_self_invalidation(signal, effect2, root9 = true) {
   var reactions = signal.reactions;
   if (reactions === null) return;
   if (!async_mode_flag && current_sources !== null && current_sources.has(signal)) {
@@ -3301,7 +3327,7 @@ function schedule_possible_effect_self_invalidation(signal, effect2, root8 = tru
         false
       );
     } else if (effect2 === reaction) {
-      if (root8) {
+      if (root9) {
         set_signal_status(reaction, DIRTY);
       } else if ((reaction.f & CLEAN) !== 0) {
         set_signal_status(reaction, MAYBE_DIRTY);
@@ -3982,21 +4008,21 @@ function from_namespace(content, flags2, ns = "svg") {
         /** @type {DocumentFragment} */
         create_fragment_from_html(wrapped)
       );
-      var root8 = (
+      var root9 = (
         /** @type {Element} */
         get_first_child(fragment)
       );
       if (is_fragment) {
         node = document.createDocumentFragment();
-        while (get_first_child(root8)) {
+        while (get_first_child(root9)) {
           node.appendChild(
             /** @type {TemplateNode} */
-            get_first_child(root8)
+            get_first_child(root9)
           );
         }
       } else {
         node = /** @type {Element} */
-        get_first_child(root8);
+        get_first_child(root9);
       }
     }
     var clone = (
@@ -13302,6 +13328,134 @@ function IncidentEvidence($anchor, $props) {
   pop();
 }
 
+// challenges/what-it-shows/publication/checkout/support-kb/src/lib/data/engineering-update.json
+var engineering_update_default = {
+  source: "https://hq.mega.dev/challenges/what-it-shows",
+  observedOn: "2026-10-29",
+  observedAfter: "First authorized claim returned progress/step one accepted",
+  incident: 4471,
+  closedLabel: "05 oct",
+  closureYearStated: false,
+  reportSnapshotDate: "2026-10-04",
+  sourceText: "NEW \xB7 DESK UPDATE\n\nengineering update\n\n#4471 \xB7 closed 05 oct\n\nparser\nFIXED\nfix(dates): parse dd/mm for eu locales\nhint\nWON'T FIX\nbooking-v3 form retired",
+  outcomes: [
+    {
+      problem: "parser",
+      label: "Shared parser",
+      reportedStatus: "FIXED",
+      detail: "fix(dates): parse dd/mm for eu locales",
+      githubAction: "Closed as completed",
+      state: "closed",
+      stateReason: "completed"
+    },
+    {
+      problem: "hint",
+      label: "Booking-v3 form hint",
+      reportedStatus: "WON'T FIX",
+      detail: "booking-v3 form retired",
+      githubAction: "Closed as not planned",
+      state: "closed",
+      stateReason: "not_planned"
+    }
+  ],
+  investigationOutcomeStated: false,
+  githubChangesApplied: true,
+  githubActionsAppliedOn: "2026-10-29"
+};
+
+// challenges/what-it-shows/publication/checkout/support-kb/src/lib/kb/EngineeringUpdate.svelte
+var root5 = from_html(`<tr><td class="svelte-86ays"><a> </a></td><td class="svelte-86ays"><strong> </strong><br/><code class="svelte-86ays"> </code></td><td class="svelte-86ays"> </td></tr>`);
+var root_15 = from_html(`<section aria-labelledby="engineering-outcomes"><h2 id="engineering-outcomes">Engineering update and ticket status</h2> <p>The <a>support desk's course-page update</a> reports <strong> </strong>.
+    The notice does not state a year. It was observed on <time> </time>,
+    after the first ticket submission. Report coverage still uses the <time> </time> export.</p> <div class="table-scroll svelte-86ays" role="region" aria-label="Reported engineering outcomes and current GitHub status" tabindex="0"><table class="svelte-86ays"><thead><tr><th class="svelte-86ays">Problem</th><th class="svelte-86ays">Reported engineering outcome</th><th class="svelte-86ays">GitHub status</th></tr></thead><tbody><!><tr data-outcome="day-shift"><td class="svelte-86ays"><a> </a></td><td class="svelte-86ays"> </td><td class="svelte-86ays">Open: unresolved investigation</td></tr></tbody></table></div> <p class="tracking-status svelte-86ays"><strong>GitHub tracking updated: issue #1 closed as completed; issue #2 closed as not planned; issue #3 remains open.</strong> A reported parser fix and a decision not to fix a retired form have different outcomes.
+    The engineering notice supplies no resolution for the separate investigation.
+    These are attributed desk statements; no production fix was independently tested here.</p></section>`);
+function EngineeringUpdate($anchor, $props) {
+  push($props, false);
+  const outcomes = engineering_update_default.outcomes;
+  const investigation = allocateReports(reports_4471_default, tenantOf, desk_notes_default.oneDayMove).find((group) => group.problem === "day-shift")?.reports ?? [];
+  const issueUrl = (problem) => ticket_links_default[problem].github ?? ticket_links_default[problem].preview;
+  const issueNumber = (url) => url.split("/").filter(Boolean).at(-1);
+  init();
+  var section = root_15();
+  var p = sibling(child(section), 2);
+  var a = sibling(child(p));
+  var strong = sibling(a, 2);
+  var text2 = only_child(strong);
+  var time = sibling(strong, 2);
+  var text_1 = only_child(time, true);
+  var time_1 = sibling(time, 2);
+  var text_2 = only_child(time_1, true);
+  next();
+  reset(p);
+  var div = sibling(p, 2);
+  var table = child(div);
+  var tbody = sibling(child(table));
+  var node = child(tbody);
+  each(node, 1, () => outcomes, (outcome) => outcome.problem, ($anchor2, outcome) => {
+    var tr = root5();
+    var td = child(tr);
+    var a_1 = child(td);
+    var text_3 = only_child(a_1);
+    reset(td);
+    var td_1 = sibling(td);
+    var strong_1 = child(td_1);
+    var text_4 = only_child(strong_1, true);
+    var code = sibling(strong_1, 2);
+    var text_5 = only_child(code, true);
+    reset(td_1);
+    var td_2 = sibling(td_1);
+    var text_6 = only_child(td_2, true);
+    reset(tr);
+    template_effect(
+      ($0, $1) => {
+        set_attribute2(tr, "data-outcome", get(outcome).problem);
+        set_attribute2(a_1, "href", $0);
+        set_text(text_3, `${get(outcome).label ?? ""} \xB7 issue #${$1 ?? ""}`);
+        set_text(text_4, get(outcome).reportedStatus);
+        set_text(text_5, get(outcome).detail);
+        set_text(text_6, get(outcome).githubAction);
+      },
+      [
+        () => issueUrl(get(outcome).problem),
+        () => issueNumber(issueUrl(get(outcome).problem))
+      ]
+    );
+    append($anchor2, tr);
+  });
+  var tr_1 = sibling(node);
+  var td_3 = child(tr_1);
+  var a_2 = child(td_3);
+  var text_7 = only_child(a_2);
+  reset(td_3);
+  var td_4 = sibling(td_3);
+  var text_8 = only_child(td_4);
+  next();
+  reset(tr_1);
+  reset(tbody);
+  reset(table);
+  reset(div);
+  next(2);
+  reset(section);
+  template_effect(
+    ($0, $1) => {
+      set_attribute2(a, "href", engineering_update_default.source);
+      set_text(text2, `#${engineering_update_default.incident ?? ""} closed ${engineering_update_default.closedLabel ?? ""}`);
+      set_text(text_1, engineering_update_default.observedOn);
+      set_text(text_2, engineering_update_default.reportSnapshotDate);
+      set_attribute2(a_2, "href", $0);
+      set_text(text_7, `Investigation \xB7 issue #${$1 ?? ""}`);
+      set_text(text_8, `No case-specific outcome stated for the ${investigation.length ?? ""} flagged reports`);
+    },
+    [
+      () => issueUrl("day-shift"),
+      () => issueNumber(issueUrl("day-shift"))
+    ]
+  );
+  append($anchor, section);
+  pop();
+}
+
 // challenges/what-it-shows/publication/checkout/support-kb/src/lib/kb/desk-ref.ts
 var ALPHABET = "0123456789ABCDEFGHJKMNPQRSTVWXYZ";
 function fnv1a(text2, seed) {
@@ -13326,8 +13480,8 @@ function deskRef(signature2) {
 }
 
 // challenges/what-it-shows/publication/checkout/support-kb/src/lib/kb/RenderStamp.svelte
-var root5 = from_html(`<p class="stamp svelte-1obw15v">desk ref <b class="svelte-1obw15v"> </b></p>`);
-var root_15 = from_html(`<p class="stamp missing svelte-1obw15v">no desk ref: this page isn't signed (no <code>signature</code> in its frontmatter)</p>`);
+var root6 = from_html(`<p class="stamp svelte-1obw15v">desk ref <b class="svelte-1obw15v"> </b></p>`);
+var root_16 = from_html(`<p class="stamp missing svelte-1obw15v">no desk ref: this page isn't signed (no <code>signature</code> in its frontmatter)</p>`);
 function RenderStamp($anchor, $props) {
   push($props, true);
   const ref = user_derived(() => $props.signature ? deskRef($props.signature) : null);
@@ -13335,7 +13489,7 @@ function RenderStamp($anchor, $props) {
   var node = first_child(fragment);
   {
     var consequent = ($anchor2) => {
-      var p = root5();
+      var p = root6();
       var b = sibling(child(p));
       var text2 = only_child(b, true);
       reset(p);
@@ -13343,7 +13497,7 @@ function RenderStamp($anchor, $props) {
       append($anchor2, p);
     };
     var alternate = ($anchor2) => {
-      var p_1 = root_15();
+      var p_1 = root_16();
       append($anchor2, p_1);
     };
     if_block(node, ($render) => {
@@ -13356,10 +13510,10 @@ function RenderStamp($anchor, $props) {
 }
 
 // challenges/what-it-shows/publication/checkout/support-kb/src/lib/kb/Callout.svelte
-var root6 = from_html(`<aside><!></aside>`);
+var root7 = from_html(`<aside><!></aside>`);
 function Callout($anchor, $props) {
   let kind = prop($props, "kind", 3, "note");
-  var aside = root6();
+  var aside = root7();
   var node = child(aside);
   snippet(node, () => $props.children);
   reset(aside);
@@ -13376,7 +13530,9 @@ var metadata = {
   "reviewed": "2026-10-29",
   "signature": "v1.eyJzdWIiOiI4NzUiLCJhdWQiOiJjaGFsbGVuZ2U6d2hhdC1pdC1zaG93cyIsImlhdCI6MTc5MzI0NDc3MCwiZXhwIjoxNzkzMzMxMTcwfQ.RqJhG82aQApGTYo3aAtt9hGXzU1UDTHFV562vwLZnM4",
   "supersedes": "0001, if this proposal is accepted",
-  "evidence_as_of": "2026-10-04"
+  "evidence_as_of": "2026-10-29",
+  "report_snapshot_as_of": "2026-10-04",
+  "engineering_update_date_as_stated": "05 oct"
 };
 var {
   layout,
@@ -13386,21 +13542,26 @@ var {
   reviewed,
   signature,
   supersedes,
-  evidence_as_of
+  evidence_as_of,
+  report_snapshot_as_of,
+  engineering_update_date_as_stated
 } = metadata;
-var root7 = from_html(
-  `<!> <h2>The problems and their tickets</h2> <p><strong>Shared parser:</strong> it reads dates month first while the affected tenants write day first.
+var root8 = from_html(
+  `<!> <!> <h2>The reported problems and their tickets</h2> <p><strong>Shared parser:</strong> the export describes dates being read month first while the affected
+tenants write day first. The later engineering notice reports a parser fix.
 R-41200 describes 7 April becoming 4 July. App, email and booking-v2 form reports use this
 path under the exported model. The desk\u2019s flagged date-shift reports are excluded from
-this ticket because their descriptions do not establish that parser mechanism.</p> <p><strong>Form hint:</strong> booking-v3 displays MM/DD/YYYY while interpreting the entry in the
-day-first tenant\u2019s convention. R-41230 describes 6 January becoming 1 June. This needs
-its own fix: correcting the shared parser does not correct misleading form guidance.
-The relevant tenant, form version and channel must be considered together.</p> <p><strong>One-day / cross-city date shifts:</strong> the desk flagged reports whose descriptions differ
+this ticket because their descriptions do not establish that parser mechanism.</p> <p><strong>Form hint:</strong> the export describes booking-v3 displaying MM/DD/YYYY while interpreting
+the entry in the day-first tenant\u2019s convention. R-41230 describes 6 January becoming
+1 June. The engineering notice now records retirement of booking-v3, with a won\u2019t-fix
+outcome for this problem. That outcome does not mean the hint was corrected. The relevant
+tenant, form version and channel must be considered together when reading the old reports.</p> <p><strong>One-day / cross-city date shifts:</strong> the desk flagged reports whose descriptions differ
 from a month/day swap. R-41202 says Tuesday 12 May became Monday 11 May; R-41620 says
 Tuesday 6 October appeared as Monday. Other reports describe differing local days or an
-invite arriving before booking. They get a separate investigation ticket now. A proven
+invite arriving before booking. They are tracked in a separate investigation ticket. A proven
 common cause is not required to preserve and investigate this distinct reported problem.
-A timezone or calendar-conversion defect remains a hypothesis, not a diagnosis.</p> <!> <h2>Why the old triage decision is insufficient</h2> <p><a href="/kb/decisions/0001-dedupe-by-subject">Decision 0001</a> and the <a href="/kb/triage/dedupe">triage guide</a> merge on normalized subject alone. Their accepted status
+A timezone or calendar-conversion defect remains a hypothesis, not a diagnosis. The new
+engineering notice supplies no case-specific outcome for this investigation.</p> <!> <h2>Why the old triage decision is insufficient</h2> <p><a href="/kb/decisions/0001-dedupe-by-subject">Decision 0001</a> and the <a href="/kb/triage/dedupe">triage guide</a> merge on normalized subject alone. Their accepted status
 does not establish that the rule remains adequate. The <a href="/kb/incidents/4471">incident page</a> calls the merged reports one parser issue with one fix
 queued, but its own table separates parser and hint. Even that table files the flagged
 reports by tenant instead of reading their symptoms. Its \u201Cno ticket of its own\u201D wording
@@ -13412,7 +13573,8 @@ intake labels and browser locale alone do not establish the mechanism.</li> <li>
 fit its explanation, track that discrepancy separately instead of merging it into a
 known fix merely because the classifier returns the same label.</li> <li>Open an investigation for a distinct reported problem even while its cause is unknown.
 Record what is observed and what evidence would confirm or reject a suspected cause.
-Split that investigation further if reproduction establishes different defects.</li> <li>Verify the parser and form-hint corrections independently. For date-shift reports,
+Split that investigation further if reproduction establishes different defects.</li> <li>Record each problem\u2019s outcome separately: a reported parser fix and a decision not
+to fix a retired form have different closure reasons. For date-shift reports,
 obtain original input, stored values, intended date or instant, and the relevant zones
 before diagnosing a conversion. Keep report links when moving or splitting work.</li></ol> <h3>Try the existing classifier</h3> <p>The explorer below demonstrates the original model, not the new problem allocation.
 Its initial example has matching subjects but different parser/hint classifications.
@@ -13421,7 +13583,16 @@ or apply the desk notes, so its verdict alone must not authorize a merge. For un
 tenants, \u201Cdifferent causes\u201D means only that a shared cause has not been established.</p> <!> <h2>Receipt and consolidation are different events</h2> <!> <p>A rise in merges can reflect consolidation of older reports, not the start of a failure.
 The chart groups source date portions into Monday\u2013Sunday weeks; it does not convert them
 to UTC. The coverage table uses received dates. Neither a fresh render nor this page\u2019s
-review date refreshes the underlying export.</p> <h2>Evidence boundaries and follow-up</h2> <p>The export supplies reported symptoms and a model of the two input paths. It supplies no
+review date refreshes the underlying export.</p> <h2>Unresolved investigation: issue #3</h2> <p>Issue #3 remains an open investigation. The desk notice reports outcomes
+for parser and hint, but does not state how the flagged reports were resolved. Closing
+#4471 does not independently establish a fix for each of their observations. The course\u2019s
+acceptance of the ticket step also does not prove a common cause for this investigation.</p> <p>The evidence table above retains every original body. Follow-up needs the original entered
+and stored event values, calendar/invite payloads, event identities, intended local date or
+instant, timezone settings and creation/send/receipt timestamps. The invite-before-booking
+claim needs clock evidence; differing local days across cities need scheduling semantics.</p> <p><strong>Recommended tracking:</strong> keep issue #3 open while those facts remain unavailable. Do not
+mark it completed or claim a timezone repair based only on the parser/hint notice. If new
+evidence establishes separate defects, a valid conversion, or an administrative decision
+not to pursue the investigation, record that reason before merging, splitting or closing it.</p> <h2>Evidence boundaries and follow-up</h2> <p>The export supplies reported symptoms and a model of the two input paths. It supplies no
 production implementation, reproduced failures or effective-dated tenant history.
 Historical parser/hint assignments therefore use the exported directory. Reports without
 exact input/output dates remain weaker evidence, even when assigned to a ticket.</p> <p>The separate investigation preserves all flagged bodies. In particular, different local
@@ -13431,32 +13602,35 @@ not an assumed timezone diagnosis. The invite-before-booking claim needs its tim
 Do not close these reports as a parser fix without evidence explaining their behavior.</p> <p>Source ownership stays with the support desk. The original reports, tenant directory and <code>desk-notes.json</code> remain under <code>src/lib/data/</code>; the original rules remain in <code>causes.ts</code> and <code>locales.ts</code>. <code>problems.ts</code> and <code>IncidentEvidence.svelte</code> compute this page\u2019s new
 allocation. Linked issue records include coverage and engineering follow-up.</p> <p>If this proposal is accepted, the desk should link it from the triage guide and incident
 page and maintain the investigation as evidence arrives. The coverage table links the
-filed GitHub issues. No live queue or fix status is inferred
-from the preserved export.</p> <!>`,
+filed GitHub issues. The reported engineering outcomes come from the separately linked
+course-page notice; they are not inferred from the old export or independently reproduced.
+GitHub issue #1 is closed as completed and #2 as not planned, based on the reported engineering outcomes. Issue #3 remains open; its five reports have no case-specific resolution in the notice.</p> <!>`,
   1
 );
 function _page_svx($anchor, $props) {
   const $sanitized_props = legacy_rest_props($props, ["children", "$slots", "$events", "$legacy"]);
   Runbook($anchor, spread_props(() => $sanitized_props, () => metadata, {
     children: ($anchor2, $slotProps) => {
-      var fragment_1 = root7();
+      var fragment_1 = root8();
       var node = first_child(fragment_1);
       Callout(node, {
         children: ($anchor3, $slotProps2) => {
           next();
-          var text2 = text("This proposed decision separates the problems merged into #4471 and links their issue\nrecords below. Counts describe the supplied export, not today's queue or verified fixes.\nAccepted decision 0001 is preserved until the desk accepts a successor.");
+          var text2 = text("This proposed decision separates the problems merged into #4471 and links their issue\nrecords below. Report counts still describe the original export. The later engineering\nnotice is attributed separately below, with verified GitHub ticket dispositions.\nAccepted decision 0001 is preserved until the desk accepts a successor.");
           append($anchor3, text2);
         },
         $slots: { default: true }
       });
-      var node_1 = sibling(node, 10);
-      IncidentEvidence(node_1, {});
-      var node_2 = sibling(node_1, 16);
-      DedupeExplorer(node_2, {});
-      var node_3 = sibling(node_2, 4);
-      QueueTimeline(node_3, { ticket: 4471 });
-      var node_4 = sibling(node_3, 14);
-      RenderStamp(node_4, {
+      var node_1 = sibling(node, 2);
+      EngineeringUpdate(node_1, {});
+      var node_2 = sibling(node_1, 10);
+      IncidentEvidence(node_2, {});
+      var node_3 = sibling(node_2, 16);
+      DedupeExplorer(node_3, {});
+      var node_4 = sibling(node_3, 4);
+      QueueTimeline(node_4, { ticket: 4471 });
+      var node_5 = sibling(node_4, 22);
+      RenderStamp(node_5, {
         get signature() {
           return signature;
         }

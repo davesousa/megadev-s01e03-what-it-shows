@@ -1,0 +1,33 @@
+{
+  "source": "https://hq.mega.dev/challenges/what-it-shows",
+  "observedOn": "2026-10-29",
+  "observedAfter": "First authorized claim returned progress/step one accepted",
+  "incident": 4471,
+  "closedLabel": "05 oct",
+  "closureYearStated": false,
+  "reportSnapshotDate": "2026-10-04",
+  "sourceText": "NEW \u00b7 DESK UPDATE\n\nengineering update\n\n#4471 \u00b7 closed 05 oct\n\nparser\nFIXED\nfix(dates): parse dd/mm for eu locales\nhint\nWON'T FIX\nbooking-v3 form retired",
+  "outcomes": [
+    {
+      "problem": "parser",
+      "label": "Shared parser",
+      "reportedStatus": "FIXED",
+      "detail": "fix(dates): parse dd/mm for eu locales",
+      "githubAction": "Closed as completed",
+      "state": "closed",
+      "stateReason": "completed"
+    },
+    {
+      "problem": "hint",
+      "label": "Booking-v3 form hint",
+      "reportedStatus": "WON'T FIX",
+      "detail": "booking-v3 form retired",
+      "githubAction": "Closed as not planned",
+      "state": "closed",
+      "stateReason": "not_planned"
+    }
+  ],
+  "investigationOutcomeStated": false,
+  "githubChangesApplied": true,
+  "githubActionsAppliedOn": "2026-10-29"
+}

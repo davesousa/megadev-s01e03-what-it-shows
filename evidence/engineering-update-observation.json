@@ -1,0 +1,14 @@
+{
+  "source": "https://hq.mega.dev/challenges/what-it-shows",
+  "observedAfter": "First authorized claim returned progress/step one accepted",
+  "engineeringUpdate": "NEW · DESK UPDATE\n\nengineering update\n\n#4471 · closed 05 oct\n\nparser\nFIXED\nfix(dates): parse dd/mm for eu locales\nhint\nWON'T FIX\nbooking-v3 form retired",
+  "exportLinks": [
+    {
+      "text": "download the kb export",
+      "href": "https://hq.mega.dev/media/what-it-shows/kb-export-267efc5e.zip"
+    }
+  ],
+  "readOnly": true,
+  "githubChangesMade": false,
+  "additionalClaimMade": false
+}

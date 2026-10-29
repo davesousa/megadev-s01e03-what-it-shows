@@ -1,3 +1,13 @@
+# Current engineering-update publication
+
+Dave authorized publishing the reviewed engineering-update package on 2026-10-29, including closing issue #1 as completed and #2 as not planned. Those closures were applied and read back from GitHub; issue #3 remains open. This update preserves the issued page signature and report allocation. No second course claim is authorized or made.
+
+The page attributes reported engineering outcomes separately from GitHub dispositions. Parser repair was reported by the desk; booking-v3 was retired rather than corrected; the five investigation reports have no case-specific resolution. Original sources, coverage, issue descriptions and the accepted decision remain unchanged.
+
+## Earlier publication procedure (historical)
+
+The following records the earlier package and signature publication stages. Its authorization wording applies to those stages only. One later authorized course claim returned progress/ticket-step acceptance; the challenge is not solved.
+
 # Publication record and procedure
 
 Dave authorized publication of the reviewed package and creation of the three issues on
