@@ -1,0 +1,119 @@
+---
+layout: runbook
+title: '0002 · Proposed: separate the date problems in #4471'
+owner: Dave
+status: proposed
+reviewed: '2026-10-29'
+signature: 'Codex for Dave | S01E03 | 2026-10-29'
+supersedes: '0001, if this proposal is accepted'
+evidence_as_of: '2026-10-04'
+---
+
+<script>
+  import QueueTimeline from '#lib/kb/QueueTimeline.svelte';
+  import DedupeExplorer from '#lib/kb/DedupeExplorer.svelte';
+  import IncidentEvidence from '#lib/kb/IncidentEvidence.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+  import Callout from '#lib/kb/Callout.svelte';
+</script>
+
+<Callout>
+This proposed decision separates the problems merged into #4471 and links their issue
+records below. Counts describe the supplied export, not today's queue or verified fixes.
+Accepted decision 0001 is preserved until the desk accepts a successor.
+</Callout>
+
+## The problems and their tickets
+
+**Shared parser:** it reads dates month first while the affected tenants write day first.
+R-41200 describes 7 April becoming 4 July. App, email and booking-v2 form reports use this
+path under the exported model. The desk's flagged date-shift reports are excluded from
+this ticket because their descriptions do not establish that parser mechanism.
+
+**Form hint:** booking-v3 displays MM/DD/YYYY while interpreting the entry in the
+day-first tenant's convention. R-41230 describes 6 January becoming 1 June. This needs
+its own fix: correcting the shared parser does not correct misleading form guidance.
+The relevant tenant, form version and channel must be considered together.
+
+**One-day / cross-city date shifts:** the desk flagged reports whose descriptions differ
+from a month/day swap. R-41202 says Tuesday 12 May became Monday 11 May; R-41620 says
+Tuesday 6 October appeared as Monday. Other reports describe differing local days or an
+invite arriving before booking. They get a separate investigation ticket now. A proven
+common cause is not required to preserve and investigate this distinct reported problem.
+A timezone or calendar-conversion defect remains a hypothesis, not a diagnosis.
+
+<IncidentEvidence />
+
+## Why the old triage decision is insufficient
+
+[Decision 0001](/kb/decisions/0001-dedupe-by-subject) and the
+[triage guide](/kb/triage/dedupe) merge on normalized subject alone. Their accepted status
+does not establish that the rule remains adequate. The
+[incident page](/kb/incidents/4471) calls the merged reports one parser issue with one fix
+queued, but its own table separates parser and hint. Even that table files the flagged
+reports by tenant instead of reading their symptoms. Its “no ticket of its own” wording
+is historical export output, not the status of the linked issue records above.
+
+The original classifier and accepted records remain unchanged so this correction is
+traceable. The new `problems.ts` allocation applies the desk notes before the classifier;
+its counts are ticket coverage, not a claim that every report's root cause is proved.
+
+## Proposed triage rule
+
+1. Preserve each original report and count each ID once. Reconcile conflicting duplicates
+   rather than silently choosing one record.
+2. Read the body as well as the subject. Check tenant locale, form version and channel;
+   intake labels and browser locale alone do not establish the mechanism.
+3. Use the supplied classifier as evidence about the input path. When a report does not
+   fit its explanation, track that discrepancy separately instead of merging it into a
+   known fix merely because the classifier returns the same label.
+4. Open an investigation for a distinct reported problem even while its cause is unknown.
+   Record what is observed and what evidence would confirm or reject a suspected cause.
+   Split that investigation further if reproduction establishes different defects.
+5. Verify the parser and form-hint corrections independently. For date-shift reports,
+   obtain original input, stored values, intended date or instant, and the relevant zones
+   before diagnosing a conversion. Keep report links when moving or splitting work.
+
+### Try the existing classifier
+
+The explorer below demonstrates the original model, not the new problem allocation.
+Its initial example has matching subjects but different parser/hint classifications.
+Changing report A from form to app changes that classification. It does not read bodies
+or apply the desk notes, so its verdict alone must not authorize a merge. For unknown
+tenants, “different causes” means only that a shared cause has not been established.
+
+<DedupeExplorer />
+
+## Receipt and consolidation are different events
+
+<QueueTimeline ticket={4471} />
+
+A rise in merges can reflect consolidation of older reports, not the start of a failure.
+The chart groups source date portions into Monday–Sunday weeks; it does not convert them
+to UTC. The coverage table uses received dates. Neither a fresh render nor this page's
+review date refreshes the underlying export.
+
+## Evidence boundaries and follow-up
+
+The export supplies reported symptoms and a model of the two input paths. It supplies no
+production implementation, reproduced failures or effective-dated tenant history.
+Historical parser/hint assignments therefore use the exported directory. Reports without
+exact input/output dates remain weaker evidence, even when assigned to a ticket.
+
+The separate investigation preserves all flagged bodies. In particular, different local
+calendar days in Lisbon and Toronto can represent the same instant correctly. R-41344
+also reports that the meeting was held twice; that scheduling complaint needs investigation,
+not an assumed timezone diagnosis. The invite-before-booking claim needs its timestamps.
+Do not close these reports as a parser fix without evidence explaining their behavior.
+
+Source ownership stays with the support desk. The original reports, tenant directory and
+`desk-notes.json` remain under `src/lib/data/`; the original rules remain in `causes.ts`
+and `locales.ts`. `problems.ts` and `IncidentEvidence.svelte` compute this page's new
+allocation. Linked issue records include coverage and engineering follow-up.
+
+If this proposal is accepted, the desk should link it from the triage guide and incident
+page and maintain the investigation as evidence arrives. The coverage table links the
+filed GitHub issues. No live queue or fix status is inferred
+from the preserved export.
+
+<RenderStamp {signature} />

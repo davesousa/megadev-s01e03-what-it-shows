@@ -1,0 +1,20 @@
+{
+  "challenge": "S01E03 what it shows",
+  "briefURL": "https://hq.mega.dev/challenges/what-it-shows",
+  "exportURL": "https://hq.mega.dev/media/what-it-shows/kb-export-267efc5e.zip",
+  "exportDateStatedByREADME": "2026-10-04",
+  "acquiredUTC": "2026-10-29T00:13:57Z",
+  "originalArchiveSHA256": "267efc5ea61aca6efaaca842160ac4d0377d56bcbf5123e61c604d6ae99597f2",
+  "candidateDate": "2026-10-29",
+  "status": "GitHub publication authorized; three issues filed; not submitted to course",
+  "revision": "panel-revision-r1",
+  "previousCandidateManifestSHA256": "309828699feefc0197d8fbe009d6069c919c501d38d1dd248964573180159bad",
+  "allocation": "374 parser / 33 hint / 5 investigation; original classifier unchanged at 379/33",
+  "reviewedManifestSHA256": "adf67e53b5d0e6815ea65597abf34a1a1b022b33897fce0aa8988cb3bda879e4",
+  "repository": "https://github.com/davesousa/megadev-s01e03-what-it-shows",
+  "issues": {
+    "parser": "https://github.com/davesousa/megadev-s01e03-what-it-shows/issues/1",
+    "hint": "https://github.com/davesousa/megadev-s01e03-what-it-shows/issues/2",
+    "day-shift": "https://github.com/davesousa/megadev-s01e03-what-it-shows/issues/3"
+  }
+}

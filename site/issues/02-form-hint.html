@@ -1,0 +1,31 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Booking-v3 date hint conflicts with day-first interpretation — 33 reports from #4471 · issue draft</title><style>body{font:16px/1.6 system-ui,sans-serif;max-width:76ch;margin:2rem auto;padding:0 1rem}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:inherit}nav{margin-bottom:1rem}</style></head><body><nav><a href="/kb/decisions/0002-triage-by-cause/">Signed KB page</a> · <a href="02-form-hint.md" download>Download exact Markdown</a><br><a href="01-parser.html">01-parser</a> · <a href="02-form-hint.html">02-form-hint</a> · <a href="03-day-shift.html">03-day-shift</a></nav><p><strong>Archived reviewed draft — the signed KB page links the filed GitHub issue.</strong></p><main><pre># Booking-v3 date hint conflicts with day-first interpretation — 33 reports from #4471
+
+**Coverage: 33 unique report IDs** in the 2026-10-04 export, all form reports: Alder Physio 12, Copper Studio 11 and Pale Harbour 10. Exact IDs and distributions are in [the coverage ledger](../evidence/report-coverage.json), group `hint`.
+
+## Problem and evidence
+
+Booking-v3 displays **MM/DD/YYYY**, but its form reads dates in the day-first tenant&#x27;s convention. The hint and accepted format should agree. Following the hint can reverse the intended month and day. The mechanism is documented in `support-kb/src/lib/kb/causes.ts` (`DATE_HINT` and `causeOf`), distinct from the shared month-first parser.
+
+- R-41230, Copper Studio form, describes 6 January becoming 1 June. Its intake tag says `parser`; the tenant&#x27;s es-ES / booking-v3 / form path yields `hint`.
+- R-41584, also Copper Studio form, describes 7 November becoming 11 July.
+- The affected tenant settings are de-DE, es-ES and pt-PT on booking-v3. Their app/email reports still follow the parser path. Neither tenant nor channel alone identifies this problem.
+
+The reports do not preserve each original typed string. The exported model supplies the input-path explanation; production reproduction and historical tenant settings remain to be checked.
+
+## Count and boundaries
+
+Deduplicate by ID before joining tenant settings. The original classifier gives 379 parser / 33 hint. The revised ticket allocation is **374 parser + 33 form hint + 5 date-shift investigation = 412**, with no overlap. The five desk-flagged reports are all outside this hint group.
+
+This group has 18 `hint` intake tags and 15 `parser` tags. Received dates span **2026-04-17–2026-09-22**, preserving the source date portions. R-41230 was received `2026-04-17T22:44:00+02:00` but merged `2026-07-02T09:56:00+02:00`; the merge date is not the first observation.
+
+Sources: original `reports-4471.json`, tenant directory, `causes.ts` and `locales.ts` under `support-kb/src/lib/`; `kb/problems.ts` computes the proposed exclusive coverage.
+
+## Engineering follow-up and acceptance criteria
+
+1. Reproduce booking-v3 form submissions for the three tenant configurations, retaining entered text, interpreted date and output.
+2. Make the displayed hint and accepted input convention agree. Verify ambiguous dates, validation and the resulting stored/displayed date.
+3. Confirm booking-v2 and app/email paths retain their intended behavior.
+4. Verify this correction independently from [the parser issue](01-parser.md) and [the date-shift investigation](03-day-shift.md).
+
+No fix has been implemented or verified. This is a prepared issue for the supplied snapshot. [The signed KB page](../support-kb/src/routes/kb/decisions/0002-triage-by-cause/+page.svx) explains the complete allocation; [its rendered version](../rendered/page.html) is included.
+</pre></main></body></html>

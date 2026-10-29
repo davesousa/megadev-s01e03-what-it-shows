@@ -1,0 +1,17 @@
+{
+  "parser": {
+    "draft": "/issues/01-parser.md",
+    "github": "https://github.com/davesousa/megadev-s01e03-what-it-shows/issues/1",
+    "preview": "/issues/01-parser.html"
+  },
+  "hint": {
+    "draft": "/issues/02-form-hint.md",
+    "github": "https://github.com/davesousa/megadev-s01e03-what-it-shows/issues/2",
+    "preview": "/issues/02-form-hint.html"
+  },
+  "day-shift": {
+    "draft": "/issues/03-day-shift.md",
+    "github": "https://github.com/davesousa/megadev-s01e03-what-it-shows/issues/3",
+    "preview": "/issues/03-day-shift.html"
+  }
+}

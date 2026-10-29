@@ -1,0 +1,9 @@
+{
+  "scope": "Manual review of every body in the 2026-10-04 export. These reports lack explicit input/output date pairs; assignment remains provisional. Not an automatic detector for future reports.",
+  "provisionalParserIds": [
+    "R-41290",
+    "R-41417",
+    "R-41514",
+    "R-41615"
+  ]
+}
